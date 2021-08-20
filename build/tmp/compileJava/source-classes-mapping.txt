@@ -1,0 +1,8 @@
+net/rpbypass/Util.java
+ net.rpbypass.Util
+net/rpbypass/Main.java
+ net.rpbypass.Main
+net/rpbypass/mixin/MultiplayerScreenMixin.java
+ net.rpbypass.mixin.MultiplayerScreenMixin
+net/rpbypass/mixin/ClientPlayNetworkHandlerMixin.java
+ net.rpbypass.mixin.ClientPlayNetworkHandlerMixin

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "rpbypass",
+  "version": "1.0.0",
+
+  "name": "Resource Pack Bypass",
+  "description": "Lets you bypass 1.17 force server resource packs.",
+  "authors": [
+    "Coderx_Gamer"
+  ],
+
+  "license": "none",
+  "icon": "",
+
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "net.rpbypass.Main"
+    ]
+  },
+  "mixins": [
+    "rpbypass.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.17.x",
+    "java": ">=16"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

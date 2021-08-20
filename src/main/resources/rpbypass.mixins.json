@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.rpbypass.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "client": [
+    "ClientPlayNetworkHandlerMixin",
+    "MultiplayerScreenMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

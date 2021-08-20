@@ -1,0 +1,20 @@
+{
+  "mappings": {
+    "net/rpbypass/mixin/MultiplayerScreenMixin": {
+      "init": "Lnet/minecraft/class_500;method_25426()V"
+    },
+    "net/rpbypass/mixin/ClientPlayNetworkHandlerMixin": {
+      "onResourcePackSend": "Lnet/minecraft/class_634;method_11141(Lnet/minecraft/class_2720;)V"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "net/rpbypass/mixin/MultiplayerScreenMixin": {
+        "init": "Lnet/minecraft/class_500;method_25426()V"
+      },
+      "net/rpbypass/mixin/ClientPlayNetworkHandlerMixin": {
+        "onResourcePackSend": "Lnet/minecraft/class_634;method_11141(Lnet/minecraft/class_2720;)V"
+      }
+    }
+  }
+}
