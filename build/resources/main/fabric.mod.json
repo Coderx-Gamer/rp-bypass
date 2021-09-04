@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "rpbypass",
-  "version": "1.0.0",
+  "version": "1.2.0",
 
   "name": "Resource Pack Bypass",
   "description": "Lets you bypass 1.17 force server resource packs.",

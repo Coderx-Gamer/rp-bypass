@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import static net.rpbypass.Util.resourcePackBypassEnabled;
+import static net.rpbypass.SharedVariables.*;
 
 @Mixin(MultiplayerScreen.class)
 public class MultiplayerScreenMixin extends Screen {
@@ -20,22 +20,39 @@ public class MultiplayerScreenMixin extends Screen {
 
     @Inject(at = @At("TAIL"), method = "init")
     public void init(CallbackInfo ci) {
-        ButtonWidget resourcePackBypassButton = new ButtonWidget(495, 310, 145, 20, new LiteralText("Resource Pack Bypass: "), (button) -> {
-            if (!resourcePackBypassEnabled) {
-                resourcePackBypassEnabled = true;
-                button.setMessage(new LiteralText("Resource Pack Bypass: ON"));
+        ButtonWidget resourcePackBypassButton = new ButtonWidget(535, 310, 100, 20, new LiteralText("RP Bypass: "), (button) -> {
+            if (!resourcePackBypass) {
+                resourcePackBypass = true;
+                button.setMessage(new LiteralText("RP Bypass: ON"));
             } else {
-                resourcePackBypassEnabled = false;
-                button.setMessage(new LiteralText("Resource Pack Bypass: OFF"));
+                resourcePackBypass = false;
+                button.setMessage(new LiteralText("RP Bypass: OFF"));
             }
         });
 
-        if (!resourcePackBypassEnabled) {
+        ButtonWidget forceDenyButton = new ButtonWidget(535, 285, 100, 20, new LiteralText("Force Deny: "), (button) -> {
+            if (!forceDeny) {
+                forceDeny = true;
+                button.setMessage(new LiteralText("Force Deny: ON"));
+            } else {
+                forceDeny = false;
+                button.setMessage(new LiteralText("Force Deny: OFF"));
+            }
+        });
+
+        if (!resourcePackBypass) {
             resourcePackBypassButton.setMessage(new LiteralText(resourcePackBypassButton.getMessage().asString() + "OFF"));
         } else {
             resourcePackBypassButton.setMessage(new LiteralText(resourcePackBypassButton.getMessage().asString() + "ON"));
         }
 
+        if (!forceDeny) {
+            forceDenyButton.setMessage(new LiteralText(forceDenyButton.getMessage().asString() + "OFF"));
+        } else {
+            forceDenyButton.setMessage(new LiteralText(forceDenyButton.getMessage().asString() + "ON"));
+        }
+
         this.addDrawableChild(resourcePackBypassButton);
+        this.addDrawableChild(forceDenyButton);
     }
 }
