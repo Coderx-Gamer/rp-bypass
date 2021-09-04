@@ -15,7 +15,7 @@
   "environment": "client",
   "entrypoints": {
     "client": [
-      "net.rpbypass.Main"
+      "net.rpbypass.MainClient"
     ]
   },
   "mixins": [
