@@ -6,4 +6,4 @@ A client-side fabric mod that allows you to bypass Mojang's required server reso
 
 ---
 
-This is NOT an offical mojang project.
+This is NOT an official mojang project.
