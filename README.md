@@ -1,4 +1,6 @@
 # rp-bypass
+# THIS MOD IS DISCONTINUED BUT IS NOW MERGED WITH UI UTILS (ui-utils.com).
+
 A client-side fabric mod that allows you to bypass Mojang's required server resource pack.
 
 ---
